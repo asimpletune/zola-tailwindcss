@@ -1,6 +1,6 @@
 # zola-tailwindcss
 
-This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com)
+This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com).
 
 Below are some details that will help you get started.
 

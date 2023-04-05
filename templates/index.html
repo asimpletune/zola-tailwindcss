@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="/style.css">
 </head>
 
-<body>
-  <article class="mx-auto prose">
+{# 👇 Note: background image is configured in tailwind.config.js 👇 #}
+
+<body class="bg-beams-light dark:bg-beams-dark bg-cover bg-fixed bg-center">
+  <article class="my-[8vh] mx-auto px-4 prose md:prose-xl dark:prose-invert ">
     {{ section.content | safe }}
 
     {% set data = load_data(path="README.md") %}
