@@ -81,7 +81,7 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 
 ## Dependencies and Tools
 
-* [zola](https://getzola.org)
+* [zola](https://getzola.org) `brew install zola`
 * [tailwindcss](https://tailwindcss.com/), [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 * node, npm
 
