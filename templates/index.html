@@ -1,30 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 
 <head>
+
+  <!-- HTML Meta Tags -->
+  <title>{{ section.title }}</title>
+  <meta name="description" content="{{ section.description }}">
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
 
   {# Main CSS styling goes here, which is output by Tailwind #}
   <link rel="stylesheet" type="text/css" href="/style.css">
 
-  {# Syntax highlighting is loaded here (and configured in `config.toml`) #}
-  <link rel="stylesheet" type="text/css" href="/syntax-theme-dark.css" media="(prefers-color-scheme: dark)" />
-  <link rel="stylesheet" type="text/css" href="/syntax-theme-light.css" media="(prefers-color-scheme: light)" />
+  {# These tags are for the previews that are generated when the website is shared, e.g. on iMessage, WhatsApp, twitter, etc... #}
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content="{{ config.base_url }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ section.title }}">
+  <meta property=" og:description" content="{{ section.description }}">
+  <meta property="og:image" content="/social_preview.jpg">
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="twitter:domain" content="zola-tailwind.spence.es">
+  <meta property="twitter:url" content="{{ config.base_url }}">
+  <meta name="twitter:title" content="{{ section.title }}">
+  <meta name="twitter:description" content="{{ section.description }}">
+  <meta name="twitter:image" content="/social_preview.jpg">
+
 </head>
 
-{# 👇 Note: background image is configured in tailwind.config.js 👇 #}
+{# 👇 Note: background image (e.g. 'bg-beams-light') is configured in tailwind.config.js 👇 #}
 
-<body class="bg-beams-light dark:bg-beams-dark bg-cover bg-fixed bg-center">
-  <article class="my-[8vh] mx-auto px-4 prose md:prose-xl dark:prose-invert ">
-    {{ section.content | safe }}
+<body class="bg-beams-light dark:bg-beams-dark bg-cover bg-fixed bg-center ">
 
-    {% set data = load_data(path="README.md") %}
+  {# Basic nav stuff #}
+  <nav class="flex text-gray-200 text-xl p-2 md:p-4">
+    <ul class="hidden md:flex gap-2 items-center mb-2 font-medium border-b border-blue-300">
+      <li><a href="/#usage">Usage</a></li>
+      <li>|</li>
+      <li><a href="/#customization">Customization</a></li>
+      <li>|</li>
+      <li><a href="/#content">Content</a></li>
+      <li>|</li>
+      <li><a href="/#templating">Templating</a></li>
+      <li>|</li>
+      <li><a href="/#styling">Styling</a></li>
+    </ul>
+    <a href="{{ config.extra.project_gh }}" class="ml-auto h-10 w-10 md:h-16 md:w-16">
+      <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16">
+        <path
+          d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z" />
+      </svg>
+    </a>
+  </nav>
 
-    {{ data | markdown | safe }}
-  </article>
+  {# Basic content #}
+  <main class="mx-auto px-4 prose md:prose-xl dark:prose-invert ">
+    <header>
+      {{ section.content | safe }}
+    </header>
+    <article class="my-[8vh] ">
+
+      {% set data = load_data(path="README.md") %}
+
+      {{ data | markdown | safe }}
+    </article>
+  </main>
+
+  {# Basic footer #}
+  <footer class="flex flex-col mt-4 bg-white/5 border-t border-blue-300">
+    {# <hr class="border-blue-300"> #}
+    <ul class="flex mx-auto py-12 text-gray-200 gap-2">
+      <li>
+        <p>Project <a href="{{ config.extra.author.website }}" class="text-yellow-100">
+            by {{ config.extra.author.name }}</a>
+        </p>
+      </li>
+      <li>|</li>
+      <li>
+        <p>Fork it <a href="{{ config.extra.project_gh }}" class="text-yellow-100"> on GitHUb </a></p>
+      </li>
+    </ul>
+  </footer>
 </body>
 
 </html>
