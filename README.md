@@ -12,13 +12,23 @@ Start by visiting the [project's GitHub repository](https://github.com/asimpletu
 
 Here's how you do stuff:
 
-* `npm install`   installs everything that you need
-* `npm run build` builds once, output will be in the `public` directory
-* `npm run serve` starts a local server that binds to `0.0.0.0:1111`, and watches the respective directories, rebuilding upon every change.
+```zsh
+# installs everything
+# that you need
+npm install
+
+# build builds once,
+# output in `./public`
+npm run
+
+# starts a local server
+# that watches/rebuilds
+npm run serve
+```
 
 For example, you can run `npm run serve` and then go to `localhost:1111` in your browser to see the websites. As you make changes to the code or content, the website will be updated.
 
-### Customization
+## Customization
 
 To use this for your own project you will probably want to take the following steps to customize (since GitHub doesn't yet support templating variables for GH template repos):
 
@@ -53,15 +63,15 @@ Here's an example
 
 ## Content
 
-Content is stored in [markdown text](https://commonmark.org/help/) files located within the `content` directory. Files named `_index.md` are called "sections", and files by any other name ending in `.md` are called "pages". For more information you can read the [zola](https://getzola.org) documentation. It is written in markdown and inserted into the html via the "[template](#templates)", which is indicated on the top of the content.
+Content is stored in [markdown text](https://commonmark.org/help/) files located within the `content` directory. Files named `_index.md` are called "sections", and files by any other name ending in `.md` are called "pages". For more information you can read the [zola](https://www.getzola.org/documentation/content/overview/) documentation. The markdown is inserted into the html via the specified "[template](#templates)", which is indicated at the top of the content's "front matter".
 
-## Templates
+## Templating
 
-Templates are in the `templates` directory. Their purpose is to decide where in the html the content goes. The content is accessible to the template as a variable named either `section.content` or `page.content`, depending on the context.
+Templates are html files stored in the `templates` directory. Their purpose is to decide where in the html the content goes. The content is accessible to the template as a variable named either `section.content` or `page.content`, depending on the context. Within the template file, you can use a templating language called [tera](http://tera.netlify.app/docs/). There are examples throughout this document of templating, wherever you see the `{{ template_variable }}`.
 
 ## Styling
 
-This website uses [tailwindcss](https://tailwindcss.com/) for most of its styling. Additional styling can be added in the `sass/input.scss` file, but usually it is not necessary to add any custom styling. This file is compiled by zola from sass into normal css, and then from there it is read by tailwind which adds whatever additional styling is referenced in the html, resulting in a file called `style.css`, which is what is used by the website.
+This website uses [tailwindcss](https://tailwindcss.com/) for most of its styling. Separate CSS can be added in the `sass/input.scss` file, but usually it is not necessary to add any custom styling. During the build/rendering process, this file is compiled by zola from sass into normal css, and then from there it is read by tailwind which adds generates the CSS based on whatever tailwind classes are references in your html, javascript, and markdown. The final result is a file called `style.css`, which is output under `./public`, and that is used by the website. *(Note: see `tailwind.config.js` for what file types and directories are "watched")*
 
 ### Typography
 
@@ -72,9 +82,8 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 ## Dependencies and Tools
 
 * [zola](https://getzola.org)
-* [tailwindcss](https://tailwindcss.com/)
-* [tailwind typography plugin](https://tailwindcss.com/docs/typography-plugin)
-* [npm](http://npmjs.com)
+* [tailwindcss](https://tailwindcss.com/), [typography plugin](https://tailwindcss.com/docs/typography-plugin)
+* node, npm
 
 ## Notes:
 
