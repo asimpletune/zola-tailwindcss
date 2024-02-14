@@ -1,6 +1,6 @@
 # zola-tailwindcss
 
-This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com).
+This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository.
 
 Below are some details that will help you get started.
 
@@ -19,7 +19,7 @@ npm install
 
 # build builds once,
 # output in `./public`
-npm run
+npm run build
 
 # starts a local server
 # that watches/rebuilds
@@ -82,7 +82,6 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 ## Dependencies and Tools
 
 * [zola](https://getzola.org) `brew install zola`
-* [tailwindcss](https://tailwindcss.com/), [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 * node, npm
 
 ## Notes:
