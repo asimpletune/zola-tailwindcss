@@ -1,14 +1,18 @@
 # zola-tailwindcss
 
-This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository.
+This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository. It currently works for zola `v0.19.x` and tailwind `v3.4.x`.
 
-Below are some details that will help you get started.
+Below are some details that will help you get started. Link to Project [README](https://github.com/asimpletune/zola-tailwindcss#readme).
 
-## Usage
+## Installation
 
 Start by visiting the [project's GitHub repository](https://github.com/asimpletune/zola-tailwindcss), and then click use the template and "create a new repository".
 
 ![Create a new repository](https://zola-tailwind.spenc.es/screenshot.png)
+
+Then, run `npm install` to download the tailwind dependencies. The project is now ready to be used.
+
+## Usage
 
 Here's how you do stuff:
 
@@ -24,6 +28,11 @@ npm run build
 # starts a local server
 # that watches/rebuilds
 npm run serve
+
+## Use can also use `BUILD_OPTS` or `SERVE_OPTS`
+## To specifiy options for those commands, e.g.
+BUILTS_OPTS="--drafts" npm run build
+SERVE_OPTS="--port 1234" npm run serve
 ```
 
 For example, you can run `npm run serve` and then go to `localhost:1111` in your browser to see the websites. As you make changes to the code or content, the website will be updated.

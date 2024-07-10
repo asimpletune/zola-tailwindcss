@@ -12,8 +12,4 @@ description = "A GitHub template for making projects with the Zola static site g
 ![zola + tailwindcss banner](banner_transparent.svg "A GitHub template for making projects with the Zola static site generator + Tailwind CSS: 🪜 + 🎨")
 `)}}
 
-🪜 because they deserve to be together 🎨
-
-*(The content below is inserted from the project's [README](https://github.com/asimpletune/zola-tailwindcss#readme) 👇👇👇)*
-
 ---
