@@ -12,6 +12,15 @@ Start by visiting the [project's GitHub repository](https://github.com/asimpletu
 
 Then, run `npm install` to download the tailwind dependencies. The project is now ready to be used.
 
+## Versions
+
+Most people who are interested in starting a project from scratch will want to begin using [Tailwind 4](https://tailwindcss.com/blog/tailwindcss-v4) right away. However, there are other Tailwind versions available in different branches. Just pick the branch you want and use the same [installation](#installation) instructions as before.
+
+| Zola   | Tailwind | Branch                                                                                  |
+|--------|----------|-----------------------------------------------------------------------------------------|
+| 0.19.2 | 4.0.0    | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.19.2 | 3.4.17   | [tailwind-3.4.17](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-3.4.17) |
+
 ## Usage
 
 Here's how you do stuff:
@@ -65,7 +74,7 @@ Here's an example
   "license": "<LICENSE_NAME>",
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.9",
-    "tailwindcss": "^3.3.1"
+    "tailwindcss": "^4.0.0"
   }
 }
 ```
@@ -80,7 +89,7 @@ Templates are html files stored in the `templates` directory. Their purpose is t
 
 ## Styling
 
-This website uses [tailwindcss](https://tailwindcss.com/) for most of its styling. Separate CSS can be added in the `sass/input.scss` file, but usually it is not necessary to add any custom styling. During the build/rendering process, this file is compiled by zola from sass into normal css, and then from there it is read by tailwind which adds generates the CSS based on whatever tailwind classes are references in your html, javascript, and markdown. The final result is a file called `style.css`, which is output under `./public`, and that is used by the website. *(Note: see `tailwind.config.js` for what file types and directories are "watched")*
+This website uses [tailwindcss](https://tailwindcss.com/) for most of its styling. Separate CSS can be added either in the `sass` directory or in static for just plain css. Since Tailwind 4.x.y, configuration happens now in `input.css` instead of tailwind.config.css.
 
 ### Typography
 
@@ -96,4 +105,3 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 ## Notes:
 
 * The `npm run serve` script runs two long-running tasks in parallel and allows both to write simultaneously to STDOUT by using [a mixture of `wait` and sending jobs to the background](https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/)
-* Sometimes important changes for styling need to be made in the `tailwind.config.js` file
