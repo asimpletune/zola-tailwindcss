@@ -105,4 +105,3 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 ## Notes:
 
 * The `npm run serve` script runs two long-running tasks in parallel and allows both to write simultaneously to STDOUT by using [a mixture of `wait` and sending jobs to the background](https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/)
-* Tailwind 4.x.y requires Node v20 and above
