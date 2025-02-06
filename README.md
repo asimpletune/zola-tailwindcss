@@ -16,10 +16,10 @@ Then, run `npm install` to download the tailwind dependencies. The project is no
 
 Most people who are interested in starting a project from scratch will want to begin using [Tailwind 4](https://tailwindcss.com/blog/tailwindcss-v4) right away. However, there are other Tailwind versions available in different branches. Just pick the branch you want and use the same [installation](#installation) instructions as before.
 
-| Zola   | Tailwind | Branch    |
-|--------|----------|-----------|
-| 0.19.2 | 4.0.0    | [main](/) |
-| 0.19.2 | 3.4.17   | [todo](/) |
+| Zola   | Tailwind | Branch                                                                                  |
+|--------|----------|-----------------------------------------------------------------------------------------|
+| 0.19.2 | 4.0.0    | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.19.2 | 3.4.17   | [tailwind-3.4.17](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-3.4.17) |
 
 ## Usage
 
