@@ -1,6 +1,6 @@
 # zola-tailwindcss
 
-This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository. It currently works for zola `v0.19.x` and tailwind `v3.4.x`.
+This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository. It currently works for zola `v0.20.x` and tailwind `v4.1.x`.
 
 Below are some details that will help you get started. Link to Project [README](https://github.com/asimpletune/zola-tailwindcss#readme).
 
@@ -18,7 +18,8 @@ Most people who are interested in starting a project from scratch will want to b
 
 | Zola   | Tailwind | Branch                                                                                  |
 |--------|----------|-----------------------------------------------------------------------------------------|
-| 0.19.2 | 4.0.0    | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.20.0 | 4.1.11   | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.19.2 | 4.0.0    | [tailwind-4.0.0](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-4.0.0)   |
 | 0.19.2 | 3.4.17   | [tailwind-3.4.17](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-3.4.17) |
 
 ## Usage
@@ -59,7 +60,7 @@ Here's an example
 ```json
 {
   "name": "<YOUR_PROJECT>",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "<DESCRIPTION_OF_YOUR_PROJECT>",
   "scripts": {
     "build": "zola build && npx tailwindcss -i ./public/input.css -o ./public/style.css -m",
@@ -73,8 +74,8 @@ Here's an example
   "author": "<YOUR_NAME>",
   "license": "<LICENSE_NAME>",
   "devDependencies": {
-    "@tailwindcss/typography": "^0.5.9",
-    "tailwindcss": "^4.0.0"
+    "@tailwindcss/typography": "^0.5.16",
+    "tailwindcss": "^4.1.11"
   }
 }
 ```
@@ -105,3 +106,4 @@ The tailwind [typography plugin](https://tailwindcss.com/docs/typography-plugin)
 ## Notes:
 
 * The `npm run serve` script runs two long-running tasks in parallel and allows both to write simultaneously to STDOUT by using [a mixture of `wait` and sending jobs to the background](https://www.cyberciti.biz/faq/how-to-run-command-or-code-in-parallel-in-bash-shell-under-linux-or-unix/)
+* Tailwindcss v4 requires node version 18 or greater, run `nvm use` to make sure the correct version is being run
