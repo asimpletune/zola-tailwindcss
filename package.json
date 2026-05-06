@@ -5,8 +5,9 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "@tailwindcss/cli": "^4.2.4",
     "@tailwindcss/typography": "^0.5.16",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.2.4"
   },
   "engines": {
     "node": ">=18.0.0"
