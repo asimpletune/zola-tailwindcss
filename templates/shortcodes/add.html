@@ -1,2 +1,0 @@
-{# Note: this is a little hack I use to insert classes from within my markdown, fits well within the tailwind philosophy #}
-{{ to | trim | markdown | safe | replace(from='>', to=' class="' ~ class ~ '">') | safe }}

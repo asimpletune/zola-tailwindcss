@@ -1,6 +1,6 @@
 # zola-tailwindcss
 
-This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository. It currently works for zola `v0.20.x` and tailwind `v4.2.x`.
+This project is a GitHub template for creating web projects that use the [Zola](https://getzola.org) static site generator, in conjunction with [Tailwindcss](https://tailwindcss.com). The [project's website](https://zola-tailwind.spenc.es) is also built from the same repository. It currently works for zola `v0.23.x` and tailwind `v4.3.x`.
 
 Below are some details that will help you get started. Link to Project [README](https://github.com/asimpletune/zola-tailwindcss#readme).
 
@@ -18,7 +18,10 @@ Most people who are interested in starting a project from scratch will want to b
 
 | Zola   | Tailwind | Branch                                                                                  |
 |--------|----------|-----------------------------------------------------------------------------------------|
-| 0.20.0 | 4.2.24   | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.23.x | 4.3.3    | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.22.x | 4.3.3    | [zola-0.22.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.22.x)         |
+| 0.21.x | 4.3.3    | [zola-0.21.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.21.x)         |
+| 0.20.0 | 4.2.24   | [zola-0.20.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.20.x)         |
 | 0.19.2 | 4.0.0    | [tailwind-4.0.0](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-4.0.0)   |
 | 0.19.2 | 3.4.17   | [tailwind-3.4.17](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-3.4.17) |
 

@@ -68,16 +68,6 @@ build_search_index = false
 
 # Configuration of the Markdown rendering
 [markdown]
-# When set to "true", all code blocks are highlighted.
-highlight_code = true
-
-# A list of directories used to search for additional `.sublime-syntax` and `.tmTheme` files.
-extra_syntaxes_and_themes = []
-
-# The theme to use for code highlighting.
-# See below for list of allowed values.
-highlight_theme = "base16-ocean-dark"
-
 # When set to "true", emoji aliases translated to their corresponding
 # Unicode emoji equivalent in the rendered Markdown files. (e.g.: :smile: => 😄)
 render_emoji = true
@@ -95,6 +85,17 @@ external_links_no_referrer = true
 # Whether smart punctuation is enabled (changing quotes, dashes, dots in their typographic form)
 # For example, `...` into `…`, `"quote"` into `“curly”` etc
 smart_punctuation = false
+
+# Configuration of code syntax highlighting.
+# Since Zola 0.22 the highlighter is Giallo (replacing Syntect) and all of its
+# settings live under this table instead of the old `[markdown] highlight_*` keys.
+[markdown.highlighting]
+# The theme to use for code highlighting. See the Zola syntax-highlighting docs
+# for the full list of bundled themes. (Giallo dropped the old `base16-*` themes;
+# `nord` is the closest match to the previous `base16-ocean-dark` and suits the
+# site's blue palette. Other nice dark options: material-theme-ocean, tokyo-night,
+# one-dark-pro, github-dark.)
+theme = "nord"
 
 # Configuration of the link checker.
 [link_checker]
