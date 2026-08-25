@@ -8,8 +8,5 @@
     "@tailwindcss/cli": "^4.3.3",
     "@tailwindcss/typography": "^0.5.20",
     "tailwindcss": "^4.3.3"
-  },
-  "engines": {
-    "node": ">=18.0.0"
   }
 }
