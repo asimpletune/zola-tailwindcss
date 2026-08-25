@@ -1,0 +1,5 @@
+{# Inserts Tailwind utility classes into markdown-generated HTML — a little hack that
+   fits the Tailwind philosophy. `to` is rendered as markdown, then `class` is injected
+   into the resulting tag(s). Zola 0.23 replaced shortcodes with Tera components, so this
+   lives in templates/components/ and is invoked from content as `{{< add … />}}`. #}
+{% component add(class, to) %}{{ to | trim | markdown | safe | replace(from='>', to=' class="' ~ class ~ '">') | safe }}{% endcomponent add %}
