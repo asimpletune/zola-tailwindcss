@@ -18,10 +18,10 @@ Most people who are interested in starting a project from scratch will want to b
 
 | Zola   | Tailwind | Branch                                                                                  |
 |--------|----------|-----------------------------------------------------------------------------------------|
-| 0.23.x | 4.3.3    | [zola-0.23.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.23.x)         |
+| 0.23.x | 4.3.3    | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
 | 0.22.x | 4.3.3    | [zola-0.22.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.22.x)         |
 | 0.21.x | 4.3.3    | [zola-0.21.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.21.x)         |
-| 0.20.0 | 4.2.24   | [main](https://github.com/asimpletune/zola-tailwindcss)                                 |
+| 0.20.0 | 4.2.24   | [zola-0.20.x](https://github.com/asimpletune/zola-tailwindcss/tree/zola-0.20.x)         |
 | 0.19.2 | 4.0.0    | [tailwind-4.0.0](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-4.0.0)   |
 | 0.19.2 | 3.4.17   | [tailwind-3.4.17](https://github.com/asimpletune/zola-tailwindcss/tree/tailwind-3.4.17) |
 
